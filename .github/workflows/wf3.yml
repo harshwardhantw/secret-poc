@@ -1,4 +1,4 @@
-name: Workflow 2
+name: Workflow 3
 
 on: workflow_dispatch
 
@@ -6,4 +6,4 @@ jobs:
     hello:
         runs-on: ubuntu-latest
         steps:
-          - run: echo ${{ secrets.SECRET }}
+          - run: echo "The secret is ${{ secrets.SECRET }}"

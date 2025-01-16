@@ -8,4 +8,4 @@ jobs:
     hello:
         runs-on: ubuntu-latest
         steps:
-          - run: echo ${{ secrets.SECRET }}
+          - run: echo "The secret is ${{ secrets.SECRET }}"
