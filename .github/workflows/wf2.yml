@@ -1,0 +1,13 @@
+name: Workflow 2
+
+on:
+    workflow_run:
+        workflows: [Workflow 1]
+        branches:
+            - master
+
+jobs:
+    hello:
+        runs-on: ubuntu-latest
+        steps:
+          - run: echo ${{ secrets.SECRET }}

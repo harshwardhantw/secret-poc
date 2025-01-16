@@ -1,0 +1,13 @@
+name: Workflow 1
+
+on:
+    pull_request:
+        types: [opened, reopened, synchronize]
+        branches:
+            - master
+
+jobs:
+    hello:
+        runs-on: ubuntu-latest
+        steps:
+          - run: echo ${{ secrets.SECRET }}
