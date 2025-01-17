@@ -1,13 +1,9 @@
-name: Workflow 1
+name: Dispatch
 
-on:
-    pull_request:
-        types: [opened, reopened, synchronize]
-        branches:
-            - main
+on: workflow_dispatch
 
 jobs:
-    hello:
+    job:
         runs-on: ubuntu-latest
         steps:
           - run: echo "The secret is ${{ secrets.SECRET }}"
