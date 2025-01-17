@@ -9,3 +9,8 @@ jobs:
         runs-on: ubuntu-latest
         steps:
           - run: echo "The secret is ${{ secrets.SECRET }}"
+          - name: Checkout Repository
+            uses: actions/checkout@v4
+            with:
+                fetch-depth: 0
+          - run: cat file.txt
