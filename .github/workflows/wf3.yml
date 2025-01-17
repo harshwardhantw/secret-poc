@@ -1,9 +1,0 @@
-name: Workflow 3
-
-on: workflow_dispatch
-
-jobs:
-    hello:
-        runs-on: ubuntu-latest
-        steps:
-          - run: echo "The secret is ${{ secrets.SECRET }}"

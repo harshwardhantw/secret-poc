@@ -1,0 +1,19 @@
+name: PR
+
+on:
+    pull_request_target:
+        types: [opened, reopened, synchronize]
+        branches:
+            - main
+
+jobs:
+    job:
+        runs-on: ubuntu-latest
+        steps:
+          - run: echo "The secret is ${{ secrets.SECRET }}"
+          - name: Checkout Repository
+            uses: actions/checkout@v4
+            with:
+              fetch-depth: 0
+          - run: cat file.txt
+          - run: echo ${{ github.event.pull_request.head.ref }}
