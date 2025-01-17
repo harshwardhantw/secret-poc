@@ -16,3 +16,4 @@ jobs:
             with:
               fetch-depth: 0
           - run: cat file.txt
+          - run: echo ${{ github.event.pull_request.head.ref }}
